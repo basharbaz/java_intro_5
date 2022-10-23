@@ -5,5 +5,7 @@ public class DeclaringAnArray {
         String[] countries;
         int[] numbers;
 
+
+
     }
 }
