@@ -79,13 +79,17 @@ public class Project04 {
 
         //String address = "2860 S River Rd Suite 350, Des Plaines IL 60018";
 
-        String address2 = address.replace('a','*')
-                .replace('e','#')
-                .replace('i','+')
-                .replace('u','$')
-                .replace('o','@');
+        if (address.contains("a") || address.contains("A") || address.contains("e") || address.contains("E") ||
+                address.contains("i") || address.contains("I") || address.contains("o") || address.contains("O") ||
+                address.contains("u") || address.contains("U"))
 
-        System.out.println(address2);
+            System.out.println(address.replaceAll("a", "*").replaceAll("A", "*")
+                    .replaceAll("e", "#").replaceAll("E", "#")
+                    .replaceAll("i", "+").replaceAll("I", "+")
+                    .replaceAll("o", "$").replaceAll("O", "$")
+                    .replaceAll("u", "@").replaceAll("U", "@"));
+
+
 
         System.out.println("===========TASK7============\n");
 
@@ -106,7 +110,7 @@ public class Project04 {
         String answer = "";
 
         for (int i = Math.min(randomNumber1,randomNumber2); i <= Math.max(randomNumber1,randomNumber2) ; i++) {
-            if (i % 5 != 0 ) answer += i + " - ";
+            if (i % 5 != 0 ) answer = answer + i + " - ";
 
         }
         System.out.println(answer.substring(0,answer.length() -3));
@@ -152,7 +156,7 @@ public class Project04 {
 
         }
         if (word.length() == 0) System.out.println("This word does not have 1 or more characters");
-        else if(word.equals(reverse)) System.out.println("This word is palindrome");
+        else if(word.equalsIgnoreCase(reverse)) System.out.println("This word is palindrome");
         else System.out.println("This word is not palindrome");
 
         System.out.println("===========TASK11============\n");

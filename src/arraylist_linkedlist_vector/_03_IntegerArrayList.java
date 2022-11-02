@@ -4,22 +4,22 @@ import java.util.ArrayList;
 
 public class _03_IntegerArrayList {
     public static void main(String[] args) {
-/*
-Create an ArrayList to store below numbers
-10
-15
-20
-10
-20
-30
+        /*
+        Create an ArrayList to store below numbers
+        10
+        15
+        20
+        10
+        20
+        30
 
-Print the ArrayList
-Print the size
+        Print the ArrayList
+        Print the size
 
-EXPECTED:
-[10, 15, 20, 10, 20, 30]
-6
- */
+        EXPECTED:
+        [10, 15, 20, 10, 20, 30]
+        6
+         */
 
         ArrayList<Integer> numbers = new ArrayList<>();
         numbers.add(10);
@@ -67,6 +67,5 @@ EXPECTED:
         for(Integer number : numbers){
             System.out.println(number);
         }
-
     }
 }

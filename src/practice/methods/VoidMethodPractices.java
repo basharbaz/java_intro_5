@@ -29,15 +29,15 @@ public class VoidMethodPractices {
      */
 
     public static void flavorPicker(String flavor) {
-//        if (flavor.equals("chocolate")) {
-//            System.out.println("You have a great taste");
-//        } else if (flavor.equals("vanilla")) {
-//            System.out.println("Not bad");
-//        } else if (flavor.equals("strawberry")) {
-//            System.out.println("Enjoy it!");
-//        } else {
-//            System.out.println("Give me a valid flavor!");
-//        }
+        if (flavor.equals("chocolate")) {
+            System.out.println("You have a great taste");
+        } else if (flavor.equals("vanilla")) {
+            System.out.println("Not bad");
+        } else if (flavor.equals("strawberry")) {
+            System.out.println("Enjoy it!");
+        } else {
+            System.out.println("Give me a valid flavor!");
+        }
         switch (flavor){
             case "chocolate":
                 System.out.println("You have a great taste");

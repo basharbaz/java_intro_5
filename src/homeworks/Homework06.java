@@ -59,6 +59,7 @@ public class Homework06 {
         System.out.println(Arrays.toString(cartoonDogs));
 
         boolean hasPluto = false;
+
         for (String element : cartoonDogs){
             if (element.equals("Pluto")) {
                 hasPluto = true;
@@ -98,6 +99,7 @@ public class Homework06 {
         System.out.println(Arrays.toString(characters));
 
         int countLetters = 0, countLowerCase = 0, countUpperCase = 0, countDigits = 0, countSpecials = 0;
+
         for(char element : characters) {
             if (Character.isLetter(element)) {countLetters++;
                 if (Character.isUpperCase(element)) countUpperCase++;

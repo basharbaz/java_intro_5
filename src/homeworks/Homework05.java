@@ -93,6 +93,23 @@ public class Homework05 {
         System.out.println("\n===========TASK8============\n");
 
 
+        int sum8 = 0;
+        do {
+            System.out.println("Please enter a number");
+            int n = input.nextInt();
+            sum8 += n;
+            if (n < 100 && sum8 < 100) {
+                System.out.println("Please enter a number");
+                n = input.nextInt();
+                sum8 += n;
+            }
+            else if (n > 100) System.out.println("This number is already more than 100");
+
+        } while (sum8 < 100);
+        System.out.println("Sum of entered numbers is at least 100");
+        input.nextLine();
+
+
         System.out.println("\n===========TASK9============\n");
 
         Scanner input4 = new Scanner(System.in);
