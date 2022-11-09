@@ -50,6 +50,7 @@ public class Homework06 {
         System.out.println(Arrays.toString(countries));
 
         Arrays.sort(countries);
+
         System.out.println(Arrays.toString(countries));
 
 
@@ -85,6 +86,7 @@ public class Homework06 {
         System.out.println("\n-----TASK 7------\n");
 
         double[] task7Numbers = {10.5, 20.75, 70, 80, 15.75};
+
         System.out.println(Arrays.toString(task7Numbers));
 
         for (double element : task7Numbers){

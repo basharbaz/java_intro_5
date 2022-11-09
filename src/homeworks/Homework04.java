@@ -24,6 +24,7 @@ public class Homework04 {
             System.out.println("Sorry, you are not in the club");
 
 
+
         System.out.println("\n===========TASK2============\n");
 
 
@@ -59,7 +60,8 @@ public class Homework04 {
 
         System.out.println("\n===========TASK4============\n");
 
-        /*String str = "  Java is FUN   ";
+        /*
+        String str = "  Java is FUN   ";
 
         str = str.trim();
         String str2 = str.toLowerCase();
@@ -71,6 +73,7 @@ public class Homework04 {
         System.out.println("The third word in the str is " + str2.substring(8,11));
 
          */
+
         String str = "   Java is FUN   ";
         str = str.trim().toLowerCase();
 

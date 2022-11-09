@@ -1,6 +1,7 @@
 package homeworks;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -34,6 +35,7 @@ public class Homework07 {
 
 
         System.out.println("\n----Task-3----\n");
+
         ArrayList<Integer> numbersT3 = new ArrayList<>();
         numbersT3.add(23);
         numbersT3.add(-34);
@@ -41,6 +43,7 @@ public class Homework07 {
         numbersT3.add(0);
         numbersT3.add(89);
         numbersT3.add(100);
+
         System.out.println(numbersT3);
         Collections.sort(numbersT3);
         System.out.println(numbersT3);
@@ -65,7 +68,9 @@ public class Homework07 {
         marvelCharacters.add("Deadpool");
         marvelCharacters.add("Captain America");
         System.out.println(marvelCharacters);
+
         boolean hasWolverine = false;
+
         for (String marvelCharacter : marvelCharacters) {
             if(marvelCharacter.equalsIgnoreCase("Wolverine")) hasWolverine = true;
 
@@ -82,8 +87,10 @@ public class Homework07 {
 
         Collections.sort(avengersCharacters);
         System.out.println(avengersCharacters);
+
         boolean hasHulk = false;
         boolean hasIronMan = false;
+
         for (String avengersCharacter : avengersCharacters) {
             if (avengersCharacter.equalsIgnoreCase("Hulk"))       hasHulk = true;
             if (avengersCharacter.equalsIgnoreCase("iron man"))   hasIronMan = true;
@@ -139,32 +146,22 @@ public class Homework07 {
 
 
         System.out.println("\n----Task-9----\n");
-        ArrayList<String> kitchenObjects = new ArrayList<>();
-        kitchenObjects.add("Plate");
-        kitchenObjects.add("spoon");
-        kitchenObjects.add("fork");
-        kitchenObjects.add("Knife");
-        kitchenObjects.add("cup");
-        kitchenObjects.add("Mixer");
+        ArrayList<String> kitchenObjects = new ArrayList<>(Arrays.asList("Plate", "spoon", "fork", "Knife", "cup", "Mixer"));
 
         System.out.println(kitchenObjects);
 
-        int countUpper = 0;
-        int countLower = 0;
-        int hasP = 0;
-        int startEndsP = 0;
+        int countUpper = 0, countLower = 0, countPp = 0, countStartEndP = 0;
 
-        for (String kitchenObject : kitchenObjects) {
-            if (kitchenObject.charAt(0) >= 65 && kitchenObject.charAt(0) <= 90 ) countUpper++;
-            else if (kitchenObject.charAt(0) >= 97 && kitchenObject.charAt(0) <= 122) countLower++;
-            if (kitchenObject.toLowerCase().contains("p")) hasP++;
-            if (kitchenObject.toLowerCase().startsWith("p") || kitchenObject.toLowerCase().endsWith("p")) startEndsP++;
+        for (String element : kitchenObjects){
+            if (Character.isUpperCase(element.charAt(0))) countUpper++;
+            else if (Character.isLowerCase(element.charAt(0))) countLower++;
+            if (element.contains("P") || element.contains("p")) countPp++;
+            if (element.startsWith("P") || element.startsWith("p") || element.endsWith("P") || element.endsWith("p")) countStartEndP++;
         }
         System.out.println("Elements starts with uppercase = " + countUpper);
         System.out.println("Elements starts with lowercase = " + countLower);
-        System.out.println("Elements having P or p = " + hasP);
-        System.out.println("Elements starting or ending P or p = " + startEndsP);
-
+        System.out.println("Elements having P or p = " + countPp);
+        System.out.println("Elements starting or ending with P or p = " + countStartEndP);
 
         System.out.println("\n----Task-10----\n");
 

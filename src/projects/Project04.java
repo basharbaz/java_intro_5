@@ -14,7 +14,7 @@ public class Project04 {
 
         if (str.length()<8) System.out.println("This String does not have 8 characters");
         else {
-            System.out.println(str.substring(str.length()-4 ) +str.substring(4,str.length()-4)+str.substring(0,4));
+            System.out.println(str.substring(str.length()-4 ) +   str.substring(4,str.length()-4)   +   str.substring(0,4));
         }
 
         System.out.println("===========TASK2============\n");
@@ -51,7 +51,7 @@ public class Project04 {
         if(name.length()<2) System.out.println("Invalid input!!!");
 
         if(name.length() % 2 == 0) {
-            System.out.println("Middle char is = " + (name.substring(name.length()/2-1, name.length()/2+1)));
+            System.out.println("Middle char is = " + (name.substring(name.length()/2 - 1, name.length()/2 + 1)));
 
         }
         if (name.length() % 2 == 1)  {
@@ -110,7 +110,7 @@ public class Project04 {
         String answer = "";
 
         for (int i = Math.min(randomNumber1,randomNumber2); i <= Math.max(randomNumber1,randomNumber2) ; i++) {
-            if (i % 5 != 0 ) answer = answer + i + " - ";
+            if (i % 5 != 0 ) answer +=  i + " - ";
 
         }
         System.out.println(answer.substring(0,answer.length() -3));
@@ -150,7 +150,9 @@ public class Project04 {
         String word = ScannerHelper.getAName();
 
         String reverse = "";
-
+        //  0  1   2   3  4
+//          c   i  v   i   c
+      //   -5  -4 -3  -2  -1
         for (int i = word.length() -1; i >=0 ; i--) {
             reverse+= word.charAt(i);
 
