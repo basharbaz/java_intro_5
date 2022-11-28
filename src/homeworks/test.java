@@ -2,19 +2,39 @@ package homeworks;
 
 public class test {
     public static void main(String[] args) {
-        System.out.println(" ******             **         *********     **     **         **        *******     ");
-        System.out.println(" **    **         **  **       **     **     **     **       **  **      **     **   ");
-        System.out.println(" **     **       **    **      **            **     **      **    **     **      **  ");
-        System.out.println(" **    **       **      **     **            **     **     **      **    **     **   ");
-        System.out.println(" ** ** **      ** * ** * **    *** * ***     **** ****    ** * ** * **   ** ** **    ");
-        System.out.println(" **      **    **        **           **     **     **    **        **   **     **   ");
-        System.out.println(" **      **    **        **           **     **     **    **        **   **      **  ");
-        System.out.println(" **     **     **        **    **     **     **     **    **        **   **       ** ");
-        System.out.println(" *******       **        **    *********     **     **    **        **   **       ** ");
+        System.out.println(" ******             **         *********     **       **         **        *******     ");
+        System.out.println(" **    **         **  **       **     **     **       **       **  **      **     **   ");
+        System.out.println(" **     **       **    **      **            **       **      **    **     **      **  ");
+        System.out.println(" **    **       **      **     **            **       **     **      **    **     **   ");
+        System.out.println(" ** ** **      ** * ** * **    *** * ***     ** ** ** **    ** * ** * **   ** ** **    ");
+        System.out.println(" **      **    **        **           **     **       **    **        **   **     **   ");
+        System.out.println(" **      **    **        **           **     **       **    **        **   **      **  ");
+        System.out.println(" **     **     **        **    **     **     **       **    **        **   **       ** ");
+        System.out.println(" *******       **        **    *********     **       **    **        **   **       ** ");
         String emoji = "\uD83E\uDD29";
         System.out.println(emoji);
     }
 }
+
+
+//package homeworks;
+//
+//public class test {
+//    public static void main(String[] args) {
+//        System.out.println("       **         **          **         **          **       **     ");
+//        System.out.println("     **  **        **        **        **  **        **       **     ");
+//        System.out.println("    **    **         **    **         **    **       **       **     ");
+//        System.out.println("   **      **          ****          **      **      **       **     ");
+//        System.out.println("  ** * ** * **          **          ** * ** * **     ** ** ** **     ");
+//        System.out.println("  **        **          **          **        **     **       **     ");
+//        System.out.println("  **        **          **          **        **     **       **     ");
+//        System.out.println("  **        **          **          **        **     **       **     ");
+//        System.out.println("  **        **          **          **        **     **       **     ");
+//
+//
+//    }
+//}
+
 
 //                ******             **         *********     **     **         **        *******
 //                **    **         **  **       **     **     **     **       **  **      **     **
