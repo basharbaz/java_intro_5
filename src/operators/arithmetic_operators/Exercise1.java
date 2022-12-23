@@ -7,9 +7,11 @@ public class Exercise1 {
         Short side is equal to 4 units
         Long side is equal to 7 units
         Find area and the perimeter of the rectangle
+
         Area = shortSide * longSide
         Perimeter = 2 * shortSide + 2 * longSide
         Perimeter = 2 * (shortSide + longSide)
+
         Expected output:
         Area is = 28
         Perimeter is = 22

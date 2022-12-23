@@ -6,6 +6,7 @@ public class Exercise2 {
         An annual average salary for an SDET in the Unites States is 90k.
         Write a Java program that calculates and prints the monthly and bi-weekly and
         weekly average amount that an SDETs makes in the United States.
+
         Expected Output
         Monthly: 7500.0
         Bi-weekly: 3461.5384615384614

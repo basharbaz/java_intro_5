@@ -24,7 +24,6 @@ public class HelloWorld {
         System.out.println("John");
         System.out.println("Doe");
 
-
     }
 }
 

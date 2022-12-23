@@ -16,7 +16,7 @@ public class UnderstandingWhileLoop {
 
         while(start <= 10){
             System.out.println(start);
-           start++;
+            start++;
         }
     }
 }

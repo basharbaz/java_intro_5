@@ -9,6 +9,7 @@ public class Exercise1 {
         1st transaction = $25.75
         2nd transaction =  $12.50
         3rd transaction = $7.25
+
         Expected output:
         Balance after 1st transaction = $74.25
         Balance after 2nd transaction = $61.75

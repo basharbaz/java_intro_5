@@ -1,80 +1,114 @@
 package projects;
 
-
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.regex.Pattern;
 
 public class Project06 {
-    public static int countMultipleWords(String[] arrays) {
-        int count = 0;
-        for (String word : arrays) {
-            if (word.trim().contains(" ")) count++;
-        }
-        return count;
+    /*
+    TASK-1 - countMultipleWords() method
+    •Write a method that takes a String[] array as an argument and counts
+    how many strings in the array has multiple words
+    •This method will return an int which is the count of multiple words
+    •NOTE: be careful about these as they are not multiple words ->“”,    “   “,
+    “    abc”,  “abc   “
+     */
+    public static int countMultipleWords(String[] arr) {
+//        int counter = 0;
+//        for (int i = 0; i < arr.length; i++) {
+//            String word = arr[i].trim();
+//            if (Pattern.matches("[\\w]+ [\\w ]+", word)) counter++;
+//        }
+//        return counter;
+        return (int) Arrays.stream(arr).filter(word ->
+                word.trim().matches("[\\w]+ [\\w ]+")).count();
     }
 
-    public static ArrayList removeNegatives(ArrayList<Integer> numbers) {
-        numbers.removeIf(number -> number < 0);
-        return numbers;
+    /*
+    TASK-2 - removeNegatives() method
+    •Write a method that takes an “ArrayList<Integer> numbers” as an
+    argument and removes all negative numbers from the given list if there
+    are any
+    •This method will return an ArrayList with removed negatives
+     */
+    public static ArrayList<Integer> removeNegatives(ArrayList<Integer> list) {
+//        for (int i = 0; i < list.size(); i++) {
+//            if (list.get(i) < 0) list.remove(i--);
+//        }
+        list.removeIf(integer -> integer < 0);
+        return list;
     }
 
-
-    public static boolean validatePassword(String pw){
-        boolean validLength = false;
-        boolean pContainsDigit = false;
-        boolean pContainsUppercase = false;
-        boolean pContainsLowercase = false;
-        boolean pContainsSpecial = false;
-        boolean pNoSpaces = false;
-        for (int i = 0; i < pw.length(); i++) {
-            if (pw.length() >= 8 && pw.length() <= 16) validLength = true;
-            if (pw.charAt(i) >= 48 && pw.charAt(i)<= 57) pContainsDigit = true;
-            if (pw.charAt(i) >= 65 && pw.charAt(i)<= 90) pContainsUppercase = true;
-            if (pw.charAt(i) >= 97 && pw.charAt(i)<= 122) pContainsLowercase = true;
-            if (!Character.isWhitespace(i)) pNoSpaces = true;
-            if ((pw.charAt(i) >= 33 && pw.charAt(i) <= 47) ||
-                    (pw.charAt(i) >= 91 && pw.charAt(i) <= 96) ||
-                    (pw.charAt(i) >= 123 && pw.charAt(i) <= 126))
-                pContainsSpecial = true;
-        }
-        if (validLength && pContainsDigit && pContainsUppercase &&
-                pContainsLowercase && pNoSpaces &&
-                pContainsSpecial) return true;
-        else return false;
+    /*
+    TASK-3 - validatePassword() method
+    •Write a method that takes a “String password” as an argument and
+    checks if the given password is valid or not
+    •This method will return true if given password is valid, or false if given
+    password is not valid
+    •A VALID PASSWORD:
+    -should have length of 8 to 16 (length of 7 or 17 should return false)
+    -should have at least 1 digit, 1 uppercase, 1 lowercase and 1 special
+    char
+    -should NOT have any space
+     */
+    public static boolean validatePassword(String password) {
+        return password.matches("(?=.*[\\d])(?=.*[A-Z])(?=.*[a-z])(?=.*[@!#$%&*])\\S{8,16}");
     }
 
-    public static boolean validateEmailAddress(String email){
-        boolean noSpaces = false;
-        int count = 0;
-        boolean contains1Special= false;
-        boolean emailFormat = false;
-        for (int i = 0; i < email.length(); i++) {
-            if (!Character.isWhitespace(i)) noSpaces = true;
-            if (email.charAt(i) == '@') count++;
-            if ((email.substring(0, email.indexOf('@')).length() >= 2) &&
-                    (email.substring(email.indexOf('@')+1, email.indexOf('.')).length() >= 2)
-                    && (email.substring(email.indexOf('.') +1).length() >= 2)) emailFormat = true;
-        }
-        if (count == 1) contains1Special = true;
-        if (noSpaces && emailFormat && contains1Special) return true;
-        else return false;
+    /*
+    TASK-4 - validateEmailAddress() method
+    •Write a method that takes a “String email” as an argument and checks if
+    the given email is valid or not
+    •This method will return true if given email is true, or false if given email is
+    not valid
+    •A VALID EMAIL:
+    -should NOT have any space
+    -should not have more than one “@” character
+    -should be in the given format <2+chars>@<2+chars>.<2+chars>
+     */
+    public static boolean validateEmailAddress(String email) {
+//        return email.matches("[\\W\\w&&[^@]]{2,}@[\\W\\w&&[^@]]{2,}\\.[\\W\\w&&[^@]]{2,}");
+        return email.matches("[\\w]{2,}@[\\w]{2,}\\.[\\w]{2,}");
     }
 
     public static void main(String[] args) {
-        String [] arr = {"foo", "", " ", "foo bar", "java is fun", "ruby"};
-        System.out.println(countMultipleWords(arr));
-        int [] numbers = {2, -5, 6, 7, -10, -78, 0, 15};
-        ArrayList<Integer> numbersList = new ArrayList<>();
-        numbersList.add(2);
-        numbersList.add(-5);
-        numbersList.add(6);
-        numbersList.add(7);
-        numbersList.add(-10);
-        numbersList.add(-78);
-        numbersList.add(0);
-        numbersList.add(15);
-        System.out.println(removeNegatives(numbersList));
-        System.out.println(validatePassword("abcd"));
-        System.out.println(validateEmailAddress("a@gmail.com"));
+        String[] arr1 = {"foo", "", " ", "foo bar", "java is fun", "ruby", "  java  run  good"};
+        ArrayList<Integer> list2 = new ArrayList<>(Arrays.asList(2, -5, 6, 7, -10, -78, 0, 15));
 
+        // Task 1 //
+        System.out.println("***** TASk 1 *****");
+        System.out.println(countMultipleWords(arr1));
+
+        // Task 2 //
+        System.out.println("***** TASk 2 *****");
+        System.out.println(removeNegatives(list2));
+
+        // Task 3 //
+        System.out.println("***** TASk 3 *****");
+        String task3A = "";
+        String task3B = "abcd";
+        String task3C = "abcd1234";
+        String task3D = "Abcd1234";
+        String task3E = "Abcd1234!";
+        System.out.println(validatePassword(task3A));
+        System.out.println(validatePassword(task3B));
+        System.out.println(validatePassword(task3C));
+        System.out.println(validatePassword(task3D));
+        System.out.println(validatePassword(task3E));
+
+        // Task 4 //
+        System.out.println("***** TASK 4 *****");
+        String task4A = "a@gmail.com";
+        String task4B = "a124!%#sdgda@gmail.com";
+        String task4C = "abc@g.com";
+        String task4D = "abc@gmail.c";
+        String task4E = "abc@@gmail.com";
+        String task4F = "abc@gmail.com";
+        System.out.println(validateEmailAddress(task4A));
+        System.out.println(validateEmailAddress(task4B));
+        System.out.println(validateEmailAddress(task4C));
+        System.out.println(validateEmailAddress(task4D));
+        System.out.println(validateEmailAddress(task4E));
+        System.out.println(validateEmailAddress(task4F));
     }
 }

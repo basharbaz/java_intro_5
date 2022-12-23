@@ -15,7 +15,7 @@ public class ScannerPractices {
 
 
         System.out.println(ScannerHelper.getAName() + "'s age is " + ScannerHelper.getAnAge() + "." +
-                "\nAddress is " + ScannerHelper.getAnAddress());
+                             "\nAddress is " + ScannerHelper.getAnAddress());
 
     }
 }

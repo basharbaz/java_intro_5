@@ -7,7 +7,9 @@ public class PracticeConcatenation {
         String wordPart1 = "le";
         String wordPart2 = "ar";
         String wordPart3 = "ning";
+
         NOTE: Use "+" operator for concatenation
+
         Expected output:
         learning
          */
@@ -24,7 +26,9 @@ public class PracticeConcatenation {
         TASK-2
         String sentencePart1 = "I can";
         String sentencePart2 = "learn Java";
+
         NOTE: Use concat() method for concatenation
+
         Expected output:
         I can learn Java
          */

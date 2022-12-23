@@ -13,11 +13,13 @@ public class AbsoluteMethod {
         /*
         Write a program asks user two ages and gets the difference between ages
         and prints them
+
         Output:
         "Please enter an age"
         input -> 24
         "Please enter another age"
         input -> 32
+
         "Difference between your ages is = 8"
          */
 

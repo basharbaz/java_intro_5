@@ -12,6 +12,5 @@ public class PrimitivesToString {
         System.out.println(String.valueOf(num1) + String.valueOf(num2)); // 510 - String - text
 
         System.out.println(String.valueOf(23) + 5); // "23" + 5 ->235
-
     }
 }

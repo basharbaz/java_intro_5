@@ -7,18 +7,6 @@ public class WhileLoopsPractice {
 
         int random = RandomNumberGenerator.getARandomNumber(1, 20);
 
-        while (random != 7) {
-
-            random = RandomNumberGenerator.getARandomNumber(1, 20);
-            System.out.println("Random number = " + random);
-
-        }
-
-        System.out.println("Congrats you hit the number: " + random);
-
-
-        /*int random = RandomNumberGenerator.getARandomNumber(1, 20);
-
         while (true){
 
             random = RandomNumberGenerator.getARandomNumber(1, 20);
@@ -30,7 +18,5 @@ public class WhileLoopsPractice {
         }
 
         System.out.println("Congrats you hit the number: " + random);
-
-         */
     }
 }

@@ -2,201 +2,98 @@ package homeworks;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
 
 public class Homework07 {
     public static void main(String[] args) {
+        System.out.println("\n==========Task09==========\n");
+        ArrayList<String> kitchenObj = new ArrayList<>(Arrays.asList("Plate", "spoon", "fork", "Knife", "cup", "Mixer"));
 
-        System.out.println("\n----Task-1----\n");
-        ArrayList<Integer> numbers = new ArrayList<>();
-        numbers.add(10);
-        numbers.add(23);
-        numbers.add(67);
-        numbers.add(23);
-        numbers.add(78);
-        System.out.println(numbers.get(3));
-        System.out.println(numbers.get(0));
-        System.out.println(numbers.get(2));
-        System.out.println(numbers);
+        int upperCase = 0;
+        int lowerCase = 0;
+        int containsP = 0;
+        int startsWithOrEndsWithP = 0;
 
-        System.out.println("\n----Task-2----\n");
-        ArrayList<String> colors = new ArrayList<>();
-        colors.add("Blue");
-        colors.add("Brown");
-        colors.add("Red");
-        colors.add("White");
-        colors.add("Black");
-        colors.add("Purple");
-        System.out.println(colors.get(1));
-        System.out.println(colors.get(3));
-        System.out.println(colors.get(5));
-        System.out.println(colors);
+        for (String s : kitchenObj) {
+            if(Character.isUpperCase(s.charAt(0))) upperCase++;
+            else lowerCase++;
+            if(s.toLowerCase().startsWith("p") || s.toLowerCase().endsWith("p")){
+                containsP++;
+                startsWithOrEndsWithP++;
+            }else if(s.toLowerCase().contains("p")) containsP++;
+            /*if(s.toLowerCase().contains("p")) {
+                containsP++;
+                if (s.toLowerCase().startsWith("p") || s.toLowerCase().endsWith("p")) startsWithOrEndsWithP++;
 
-
-        System.out.println("\n----Task-3----\n");
-
-        ArrayList<Integer> numbersT3 = new ArrayList<>();
-        numbersT3.add(23);
-        numbersT3.add(-34);
-        numbersT3.add(-56);
-        numbersT3.add(0);
-        numbersT3.add(89);
-        numbersT3.add(100);
-
-        System.out.println(numbersT3);
-        Collections.sort(numbersT3);
-        System.out.println(numbersT3);
-
-
-        System.out.println("\n----Task-4----\n");
-        ArrayList<String> cities = new ArrayList<>();
-        cities.add("Istanbul");
-        cities.add("Berlin");
-        cities.add("Madrid");
-        cities.add("Paris");
-        System.out.println(cities);
-        Collections.sort(cities);
-        System.out.println(cities);
-
-
-        System.out.println("\n----Task-5----\n");
-        ArrayList<String> marvelCharacters = new ArrayList<>();
-        marvelCharacters.add("Spider Man");
-        marvelCharacters.add("Iron Man");
-        marvelCharacters.add("Black Panther");
-        marvelCharacters.add("Deadpool");
-        marvelCharacters.add("Captain America");
-        System.out.println(marvelCharacters);
-
-        boolean hasWolverine = false;
-
-        for (String marvelCharacter : marvelCharacters) {
-            if(marvelCharacter.equalsIgnoreCase("Wolverine")) hasWolverine = true;
-
-        }
-        System.out.println(hasWolverine);
-
-
-        System.out.println("\n----Task-6----\n");
-        ArrayList<String> avengersCharacters = new ArrayList<>();
-        avengersCharacters.add("Hulk");
-        avengersCharacters.add("Black Widow");
-        avengersCharacters.add("Captain America");
-        avengersCharacters.add("Iron Man");
-
-        Collections.sort(avengersCharacters);
-        System.out.println(avengersCharacters);
-
-        boolean hasHulk = false;
-        boolean hasIronMan = false;
-
-        for (String avengersCharacter : avengersCharacters) {
-            if (avengersCharacter.equalsIgnoreCase("Hulk"))       hasHulk = true;
-            if (avengersCharacter.equalsIgnoreCase("iron man"))   hasIronMan = true;
-        }
-        if (hasHulk && hasIronMan)System.out.println(true);
-        else System.out.println(false);
-
-
-        System.out.println("\n----Task-7----\n");
-        ArrayList<Character> characters = new ArrayList<>();
-
-        characters.add('A');
-        characters.add('x');
-        characters.add('$');
-        characters.add('%');
-        characters.add('9');
-        characters.add('*');
-        characters.add('+');
-        characters.add('F');
-        characters.add('G');
-
-        System.out.println(characters);
-        for (Character character : characters) {
-            System.out.println(character);
-        }
-
-
-        System.out.println("\n----Task-8----\n");
-        ArrayList<String> computerObjects = new ArrayList<>();
-
-        computerObjects.add("Desk");
-        computerObjects.add("Laptop");
-        computerObjects.add("Mouse");
-        computerObjects.add("Monitor");
-        computerObjects.add("Mouse-Pad");
-        computerObjects.add("Adapter");
-
-        System.out.println(computerObjects);
-        Collections.sort(computerObjects);
-        System.out.println(computerObjects);
-
-        int containsM_m = 0;
-        int containsA_E = 0;
-
-        for (String computerObject : computerObjects) {
-            if (computerObject.toLowerCase().startsWith("m")) containsM_m++;
-            if (!computerObject.toLowerCase().contains("a")){
-                if (!computerObject.toLowerCase().contains("e")) containsA_E++;
+             */
             }
-        }
-        System.out.println(containsM_m);
-        System.out.println(containsA_E);
+        System.out.println(kitchenObj);
+        System.out.println("Elements starts with uppercase = " + upperCase);
+        System.out.println("Elements starts with lowercase = " + lowerCase);
+        System.out.println("Elements having P or p = " + containsP);
+        System.out.println("Elements starting or ending with P or p = " + startsWithOrEndsWithP);
 
 
-        System.out.println("\n----Task-9----\n");
-        ArrayList<String> kitchenObjects = new ArrayList<>(Arrays.asList("Plate", "spoon", "fork", "Knife", "cup", "Mixer"));
 
-        System.out.println(kitchenObjects);
 
-        int countUpper = 0, countLower = 0, countPp = 0, countStartEndP = 0;
+        System.out.println("\n==========Task10==========\n");
 
-        for (String element : kitchenObjects){
-            if (Character.isUpperCase(element.charAt(0))) countUpper++;
-            else if (Character.isLowerCase(element.charAt(0))) countLower++;
-            if (element.contains("P") || element.contains("p")) countPp++;
-            if (element.startsWith("P") || element.startsWith("p") || element.endsWith("P") || element.endsWith("p")) countStartEndP++;
-        }
-        System.out.println("Elements starts with uppercase = " + countUpper);
-        System.out.println("Elements starts with lowercase = " + countLower);
-        System.out.println("Elements having P or p = " + countPp);
-        System.out.println("Elements starting or ending with P or p = " + countStartEndP);
+        ArrayList<Integer> numbers = new ArrayList<>(Arrays.asList(3, 5, 7, 10, 0, 20, 17, 10, 23, 56, 78));
 
-        System.out.println("\n----Task-10----\n");
-
-        ArrayList<Integer> numbersT10 = new ArrayList<>();
-
-        numbersT10.add(3);
-        numbersT10.add(5);
-        numbersT10.add(7);
-        numbersT10.add(10);
-        numbersT10.add(0);
-        numbersT10.add(20);
-        numbersT10.add(17);
-        numbersT10.add(10);
-        numbersT10.add(23);
-        numbersT10.add(56);
-        numbersT10.add(78);
-
-        System.out.println(numbersT10);
-
+        System.out.println("Elements that can be divided by 10 = " + numbers.stream().filter(x -> x % 10 == 0).count());
+        System.out.println("Elements that are even and greater than 15 = " + numbers.stream().filter(x -> x % 2 == 0 & x > 15).count());
+        System.out.println("Elements that are odd and less than 20 = " + numbers.stream().filter(x -> x % 2 != 0 & x < 20).count());
+        System.out.println("Elements that are less than 15 or greater than 50 = " + numbers.stream().filter(x -> x < 15 | x > 50).count());
+        /*
         int divideBy10 = 0;
-        int evenAndGreaterThan15 = 0;
-        int oddAndLessThan20 = 0;
-        int lessThan15OrGreaterThan50 = 0;
+        int evenNumGreaterThan15 = 0;
+        int oddNumLessThan20 = 0;
+        int moreThanOrLessThan = 0;
 
-        for (Integer num : numbersT10) {
-
-            if (num % 10 == 0) divideBy10++;
-            if (num % 2 == 0 && num > 15) evenAndGreaterThan15++;
-            if (num % 2 == 1 && num < 20) oddAndLessThan20++;
-            if (num < 15 || num > 50) lessThan15OrGreaterThan50++;
+        for (Integer number : numbers) {
+            if(number % 10 == 0) divideBy10++;
+            if(number > 15 && number % 2 == 0) evenNumGreaterThan15++;
+            if(number < 20 && number % 2 != 0) oddNumLessThan20++;
+            if(number < 15 || number > 50) moreThanOrLessThan++;
         }
+
+
+
+        for (Integer number : numbers) {
+            if(number % 2 == 0){
+                if(number > 15)evenNumGreaterThan15++;
+                if(number % 10 == 0) divideBy10++;
+            }else if(number < 20) oddNumLessThan20++;
+            if(number < 15 || number > 50) moreThanOrLessThan++;
+        }
+
+
+        System.out.println(numbers);
         System.out.println("Elements that can be divided by 10 = " + divideBy10);
-        System.out.println("Elements that are even and greater than 15 = " + evenAndGreaterThan15);
-        System.out.println("Elements that are odd and less than 20 = " + oddAndLessThan20);
-        System.out.println("Elements that are less than 15 or greater than 50 = " + lessThan15OrGreaterThan50);
+        System.out.println("Elements that are even and greater than 15 = " + evenNumGreaterThan15);
+        System.out.println("Elements that are odd and less than 20 = " + oddNumLessThan20);
+        System.out.println("Elements that are less than 15 or greater than 50 = " + moreThanOrLessThan);
+
+
+         */
+
+        // 0 1 1 2 3 5 8 13
+
+        int firstNum = 0;  // 0 1 1 2
+        int secondNum = 1; // 1 1 2 3
+        int sum;           // 1 2 3
+        int iter = 15;
+        String ans = ""; // 0 1 1 2
+
+        for (int i = 0; i < iter; i++) {
+            ans += firstNum + " ";
+            sum = firstNum + secondNum;
+            firstNum = secondNum;
+            secondNum = sum;
+
+        }
+        System.out.println(ans);
+
 
     }
 }
+

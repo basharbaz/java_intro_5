@@ -1,340 +1,125 @@
 package homeworks;
 
+import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
+
 import java.util.Scanner;
 
 public class Homework03 {
     public static void main(String[] args) {
-
-
-        System.out.println("\n-----------Task1-----------------");
-        Scanner task1 = new Scanner(System.in);
-
-        System.out.println("Please input two numbers ");
-        int num1 = task1.nextInt();
-        int num2 = task1.nextInt();
-
-        System.out.println("The difference between numbers is = " + (Math.abs(num1 - num2)));
-
-
-        System.out.println("\n-----------Task2-----------------");
-
-
-        Scanner task2 = new Scanner(System.in);
-
-        System.out.println("Please input five numbers ");
-
-        int number1 = task2.nextInt();
-        int number2 = task2.nextInt();
-        int number3 = task2.nextInt();
-        int number4 = task2.nextInt();
-        int number5 = task2.nextInt();
-
-        System.out.println("Max value = " + Math.max(Math.max((Math.max(number1, number2)), (Math.max(number3, number4))), number5));
-
-        System.out.println("Min value = " + Math.min(Math.min((Math.min(number1, number2)), (Math.min(number3, number4))), number5));
-
-
-        ///////////////////////////
-
-
-        System.out.println("\n-----------Task3-----------------");
-
-
-        int RandomBetween50to100_1 = (int) (Math.random() * (100 - 50 + 1) + 50);
-
-        System.out.println("Number 1 = " + RandomBetween50to100_1);
-
-        int RandomBetween50to100_2 = (int) (Math.random() * (100 - 50 + 1) + 50);
-
-        System.out.println("Number 2 = " + RandomBetween50to100_2);
-
-        int RandomBetween50to100_3 = (int) (Math.random() * (100 - 50 + 1) + 50);
-
-        System.out.println("Number 3 = " + RandomBetween50to100_3);
-
-        System.out.println("The sum of numbers is = " + (RandomBetween50to100_1 + RandomBetween50to100_2 + RandomBetween50to100_3));
-
-
-/////////////////////////////////////////////
-
-        System.out.println("\n-----------Task4-----------------");
-
-        int alex = 125;
-        int mike = 220;
-
-        double alexgivemike = (125 - 25.5);
-        double mikegetfromalex = (220 + 25.5);
-
-        System.out.println("Alex's money: " + alexgivemike + "$");
-        System.out.println("Alex's money: " + mikegetfromalex + "$");
-
-
-        /////////////////////////////////////////////
-
-        System.out.println("\n-----------Task5-----------------");
-
-        int bikeprice = 390;
-        double b2 = 15.60;
-
-        double b3 = (bikeprice / b2);
-
-        System.out.println(b3);
-
-
-        //////////////
-
-        System.out.println("\n-----------Task6-----------------");
-
-        String s1 = "5", s2 = "10";
-
-        int i1 = Integer.parseInt(s1);
-        int i2 = Integer.parseInt(s2);
-
-        System.out.println("Sum of 5 and 10 is = " + (i1 + i2));
-
-        System.out.println("Product of 5 and 10 is = " + i1 * i2);
-
-        System.out.println("Division of 5 and 10 is = " + i1 / i2);
-
-        System.out.println("Subtraction of 5 and 10 is = " + (i1 - i2));
-
-        System.out.println("Remainder of 5 and 10 is = " + i1 % i2);
-
-
-        ////////////////////////////////////
-
-
-        System.out.println("\n-----------Task7-----------------");
-
-
-        String s11 = "200" , s22 = "-50" ;
-
-        int i11 = Integer.parseInt(s11);
-        int i22 = Integer.parseInt(s22);
-
-
-
-
-        System.out.println("The greatest value is = " + Math.max(i11, i22));
-        System.out.println("The smallest value is = " + Math.min(i11, i22));
-        System.out.println("The average is = " + (i11 + i22) / 2);
-        System.out.println("The absolute difference is = " + Math.abs(i11 - i22));
-
-
-/////////////////////////////////////////////////////
-
-
-        System.out.println("\n-----------Task8-----------------");
-
-
-        double moneysave1 = 0.96;
-
-        System.out.println((int) (24 / moneysave1) + " days");
-        System.out.println((int) (168 / moneysave1) + " days");
-        System.out.println("$" + 150 * moneysave1);
-
-
-///////////////////////////////////////////////////////////////////////////////
-
-
-        System.out.println("\n-----------Task9-----------------");
-
-
-        double jessiesave = 1250;
-        double dailysave = 62.5;
-
-        System.out.println((int) (jessiesave / dailysave));
-
-
-////////////////////////////
-
-
-        System.out.println("\n-----------Task10-----------------");
-
-        double dansave = 14265;
-
-        System.out.println("Option 1 will take " + (int) (dansave / 475.5) + " months");
-        System.out.println("Option 1 will take " + (int) (dansave / 951) + " months");
-
-
-///////////////////////////////////////////
-
-
-        System.out.println("\n-----------Task11-----------------");
-
-        Scanner task11 = new Scanner(System.in);
-
-        int nn1 = task11.nextInt();
-        int nn2 = task11.nextInt();
-
-        System.out.println((double) nn1 / nn2);
-
-
-/////////////////////////////////////////////
-
-
-        System.out.println("\n-----------Task12-----------------");
-
-        int randomNumber = (int) (Math.random() * 101);
-
-        int randomNumber2 = (int) (Math.random() * 101);
-
-        int randomNumber3 = (int) (Math.random() * 101);
-
-        System.out.println(randomNumber);
-        System.out.println(randomNumber2);
-        System.out.println(randomNumber3);
-
-        if (randomNumber > 25) {
-            System.out.println("True");
-        } else {
-            System.out.println("false");
-            {
-
-            }
-        }
-        if (randomNumber2 > 25) {
-            System.out.println("True");
-        } else {
-            System.out.println("false");
-            {
-
-            }
-        }
-        if (randomNumber3 > 25) {
-            System.out.println("True");
-        } else {
-            System.out.println("false");
-            {
-
-            }
+        Scanner input = new Scanner(System.in);
+        System.out.println("=============Task2============\n");
+
+        int number1 , number2, number3, number4, number5;
+
+        System.out.println("Please enter 5 numbers");
+        number1 = input.nextInt();
+        number2 = input.nextInt();
+        number3 = input.nextInt();
+        number4 = input.nextInt();
+        number5 = input.nextInt();
+
+        System.out.println("Max value = " + Math.max(number1, (Math.max(Math.max(number2, number3), Math.max(number4, number5))) ));
+        System.out.println("=============Task10============\n");
+
+        double moneyToSave = 14_265;
+        double option1 = 475.5;
+        double option2 = 951;
+
+        System.out.println("Option 1 will take " + (int)(moneyToSave/option1) + " months");
+        System.out.println("Option 2 will take " + (int)(moneyToSave/option2) + " months");
+
+        System.out.println("=============Task11============\n");
+        int num1, num2;
+        System.out.println("Enter 2 numbers:");
+        num1 = 15;
+        num2 = 2;
+        System.out.println((num1/(double)num2));
+
+        System.out.println("=============Task12============\n");
+        int random1, random2, random3;
+
+        // bigger - smaller + 1
+        random1 = (int)(Math.random() * 101);
+        random2 = (int)(Math.random() * 101);
+        random3 = (int)(Math.random() * 101);
+
+        System.out.println((random1 > 25) && (random2 > 25) && (random3 > 25));
+
+        System.out.println("=============Task13============\n");
+
+        System.out.println("Please enter a number between 1 and 7");
+        int dayOfTheWeek = input.nextInt();
+/*
+        if(dayOfTheWeek == 1) System.out.println("MONDAY");
+        else if(dayOfTheWeek == 2) System.out.println("TUESDAY");
+        else if(dayOfTheWeek == 3) System.out.println("WEDNESDAY");
+        else if(dayOfTheWeek == 4) System.out.println("THURSDAY");
+        else if(dayOfTheWeek == 5) System.out.println("FRIDAY");
+        else if(dayOfTheWeek == 6) System.out.println("SATURDAY");
+        else if(dayOfTheWeek == 7) System.out.println("SUNDAY");
+        else System.out.println("Number is not within 1 and 7");
+
+ */
+        switch (dayOfTheWeek){
+            case (1):
+                System.out.println("MONDAY");
+                break;
+            case (2):
+                System.out.println("TUESDAY");
+                break;
+            case (3):
+                System.out.println("WEDNESDAY");
+                break;
+            case (4):
+                System.out.println("THURSDAY");
+                break;
+            case (5):
+                System.out.println("FRIDAY");
+                break;
+            case (6):
+                System.out.println("SAT");
+                break;
+            case (7):
+                System.out.println("SUNDAY");
+                break;
+            default:
+                System.out.println("Number is not within 1 and 7");
+                break;
         }
 
-        /////////////////////////////////////////////
+        System.out.println("=============Task14============\n");
+        int exam1, exam2,exam3;
+
+        System.out.println("What are the three grades?");
+        exam1 = input.nextInt();
+        exam2 = input.nextInt();
+        exam3 = input.nextInt();
+
+        int average = (exam1 + exam2 + exam3) / 3;
+
+        System.out.println(average);
+        if(average >= 70) System.out.println("YOU PASSED!");
+        else System.out.println("YOU FAILED!");
+
+        System.out.println("=============Task15============\n");
+
+        System.out.println("Please enter 3 numbers");
+        int match1 = input.nextInt();
+        int match2 = input.nextInt();
+        int match3 = input.nextInt();
 
 
-        System.out.println("\n-----------Task13-----------------");
+
+        if(match1 == match2 && match2 == match3) System.out.println("TRIPLE MATCH");
+        else if(match1 == match2 || match2 == match3 || match1 == match3) System.out.println("double match");
+        else System.out.println("NO MATCH");
 
 
-        Scanner task13 = new Scanner(System.in);
-
-        System.out.println("enter a number between 1 to 7 ");
-
-        int daynumber = task13.nextInt();
-
-        if (daynumber == 1) {
-            System.out.println("The number entered returns MONDAY");
-        } else if (daynumber == 2) {
-            System.out.println("The number entered returns TUESDAY");
-        } else if (daynumber == 3) {
-            System.out.println("The number entered returns WEDNESDAY");
-        } else if (daynumber == 4) {
-            System.out.println("The number entered returns THURSDAY");
-        } else if (daynumber == 5) {
-            System.out.println("The number entered returns FRIDAY");
-        } else if (daynumber == 6) {
-            System.out.println("The number entered returns SATURDAY");
-        } else if (daynumber == 7) {
-            System.out.println("The number entered returns SUNDAY");
-        }
 
 
-        //////////////////////////////////////
 
 
-        System.out.println("\n-----------Task14-----------------");
-
-
-        Scanner task14 = new Scanner(System.in);
-
-        System.out.println("Tell me your exam results?");
-
-        int grade = task14.nextInt();
-
-        int grade2 = task14.nextInt();
-
-        int grade3 = task14.nextInt();
-
-
-        if ((grade + grade2 + grade3) / 3 >= 70) {
-            System.out.println("YOU PASSED!");
-        } else {
-            {
-                System.out.println("YOU FAILED!");
-            }
-
-
-        }
-
-
-        //////////////////////////////////////
-
-
-        System.out.println("\n-----------Task15-----------------");
-
-
-        Scanner task15 = new Scanner(System.in);
-
-        System.out.println("Enter 3 numbers");
-
-        int numb1 = task15.nextInt();
-        int numb2 = task15.nextInt();
-        int numb3 = task15.nextInt();
-
-        if (numb1 == numb2 && numb2 == numb3 && numb1 == numb3) {
-            System.out.println("TRIPLE MATCH");
-        } else if (numb1 == numb2) {
-            System.out.println("DOUBLE MATCH");
-        } else if (numb2 == numb3) {
-            System.out.println("DOUBLE MATCH");
-        } else if (numb1 == numb3) {
-            System.out.println("DOUBLE MATCH");
-        } else if (numb1 != numb2 && numb2 != numb3 && numb1 != numb3) {
-            System.out.println("NO MATCH");
-        } else {
-            System.out.println("Wrong entry");
-            {
-
-            }
-        }
     }
+
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

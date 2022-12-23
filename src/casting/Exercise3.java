@@ -7,6 +7,7 @@ public class Exercise3 {
         /*
         PS5 -> $600
         $20 per day saving
+
         Expected output:
         You can buy PS5 in 30 days
          */

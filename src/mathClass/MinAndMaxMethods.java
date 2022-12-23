@@ -36,12 +36,14 @@ public class MinAndMaxMethods {
         System.out.println("maxOfTwoDecimalNeg = " + maxOfTwoDecimalNeg); // -5.4
 
         /*
+
         Find the max value of the given numbers and print them
         * 6, 9
         * 17, 49
         * 34.2, 12.5
         * -14, -32
         * 17, 49, 125
+
         Expected output:
         * Max is 9
         * Max is 49
@@ -64,6 +66,7 @@ public class MinAndMaxMethods {
         * -14, -32
         * 17, 49, 125
         * 45, 32, 56, 89
+
         Expected output:
         * min is 6
         * min is 17
